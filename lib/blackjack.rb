@@ -23,7 +23,6 @@ def get_user_input
 end
 
 def end_game(card_total)
-  print "LOL"
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
@@ -66,7 +65,7 @@ def runner
   welcome
   card_total = initial_round
   print card_total
-  until card_total > 21
+  while card_total < 21
     card_total += hit?(card_total)
     print card_total
     display_card_total(card_total)
