@@ -32,6 +32,7 @@ def initial_round
   card_total += deal_card
   card_total += deal_card
   display_card_total(card_total)
+  print card_total
   card_total
 end
 
@@ -63,10 +64,10 @@ end
 def runner
   welcome
   card_total = initial_round
-  puts card_total
+  print card_total
   until card_total > 21
     card_total += hit?(card_total)
-    puts card_total
+    print card_total
     display_card_total(card_total)
   end
   end_game(card_total)
